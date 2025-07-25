@@ -13,12 +13,13 @@ body
 #power-ups-container 
 {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    margin: 10px;
     border-radius: 10px;
     margin: 0px 200px;
+    padding-top: 100px;
     padding-bottom: 20px;
 }
 
@@ -28,6 +29,7 @@ body
     position: relative;
     align-items: center;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .text-centered
@@ -117,6 +119,20 @@ body
     left: 15px;
     top: 85px;
     gap: 2px
+}
+
+.power-up-title-label
+{
+    position: absolute;
+    top: 20px;
+    left: 295px;
+    text-decoration: underline;
+}
+
+hr 
+{
+    width: 80%;
+    opacity: 75%;
 }
 
 @keyframes floatUpFade
