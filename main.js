@@ -1,12 +1,14 @@
 
 class PowerUp 
 {
-     constructor(name, cost, effect, amountPurchased) 
+     constructor(name, cost, effect, amountPurchased, currentCostAmount, costAmountLabel) 
      {
         this.name = name; 
         this.cost = cost; 
         this.effect = effect;
         this.amountPurchased = amountPurchased;
+        this.currentCostAmount = currentCostAmount;
+        this.costAmountLabel = costAmountLabel;
      }
 
      onPowerUpClick() 
@@ -15,10 +17,12 @@ class PowerUp
         if(currentGooCount >= this.cost)
         {
                 this.amountPurchased++;
-                currentGooCount -= this.cost;
+                currentGooCount -= this.currentCostAmount;
                 gooCounterTxt.textContent = currentGooCount;
                 gooPerSecond += this.effect;
                 gooPerSecondTxt.textContent = gooPerSecond;
+                this.currentCostAmount += this.cost;
+                this.costAmountLabel.textContent = this.currentCostAmount;
                 console.log(currentGooCount);
         }
         else 
@@ -30,7 +34,8 @@ class PowerUp
 
 //getting text elements
 let gooCounterTxt = document.getElementById("goo-counter-span");
-let gooPerSecondTxt = document.getElementById("goo-per-second-count-span")
+let gooPerSecondTxt = document.getElementById("goo-per-second-count-span");
+let powerUpOneCostTxt = document.getElementById("power-up-one-cost-label");
 
 //getting images
 const gooImg = document.getElementById("goo-img");
@@ -43,12 +48,13 @@ let currentGooCount = 0;
 let gooPerSecond = 1; 
 const time = 1000;
 
-const powerUpOne = new PowerUp("x1", 10, 1, 0);
+const powerUpOne = new PowerUp("x1", 10, 1, 0, 10, powerUpOneCostTxt);
 const powerUpTwo = new PowerUp("x5", 50, 5, 0);
 const powerUpThree = new PowerUp("x5", 100, 10, 0);
 
 //initializations
 gooPerSecondTxt.textContent = gooPerSecond;
+powerUpOneCostTxt.textContent = 10;
 
 setInterval(AddPassiveGoo, time);
 
