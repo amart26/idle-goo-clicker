@@ -10,14 +10,14 @@ const powerUpThree = document.getElementById("power-up-3");
 
 //global variables
 let currentGooCount = 0;
-let gooPerSecond = 1; 
+let gooPerSecond = 100; 
 let time = 1000;
 
 //initializations
 gooPerSecondTxt.textContent = gooPerSecond;
 setInterval(AddPassiveGoo, time);
 
-//event listners
+//event listeners
 gooImg.addEventListener("click", onGooClick);
 powerUpOne.addEventListener("click", onPowerUpClick);
 powerUpTwo.addEventListener("click", onPowerUpClick);
@@ -45,9 +45,8 @@ function onPowerUpClick()
     let addFiveGPS = 5;
     let addTenGPS = 10; 
 
-    
-}
 
+}
 
 
 //debugging
