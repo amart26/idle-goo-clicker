@@ -69,15 +69,12 @@ powerUpOneCostTxt.textContent = 10;
 
 setInterval(AddPassiveGoo, time);
 
-
 //event listeners
 gooImg.addEventListener("click", onGooClick);
 
 powerUpOneImg.addEventListener("click", () => powerUpOne.onPowerUpClick());
 powerUpTwoImg.addEventListener("click", () => powerUpTwo.onPowerUpClick());
 powerUpThreeImg.addEventListener("click", () => powerUpThree.onPowerUpClick());
-
-
 
 //functions
 function addClickScore()
