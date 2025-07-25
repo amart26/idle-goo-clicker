@@ -7,29 +7,29 @@
     <title>Idle Goo Clicker</title>
 </head>
 <body>
-        <div id="goo-div" class="goo-container">
-            <div>
-                <h1 id="goo-count-txt"><span id="goo-counter-span">0 </span> Gallons of Goo</h1>
-                <img id="goo-img" class="hover-pointer onc" src="./Assets/Images/goo.png" alt="temporary image of goo">
-                <h1 id="goo-per-second-count-txt"><span id="goo-per-second-count-span">0 </span> GPS</h1>
+        <div id="main-goo-container">
+            <div class="main-goo-item">
+                    <h1 id="goo-count-txt" class="text-centered"><span id="goo-counter-span">0</span> <span class="goo-text-style">Gallons of Goo</span></h1>
+                    <img id="goo-img" class="hover-pointer" width="400" heigt="400" src="./Assets/Images/goo-bottle.png" alt="temporary image of goo">
+                    <h3 id="goo-per-second-count-txt" class="text-centered"><span id="goo-per-second-count-span">0 </span> Goo per second</h3>    
+            </div>
+        </div>
 
+        <div id="power-ups-container">
+            <div class="power-up-item">
+                <p class="power-up-label text-centered">Goo Worker</p>
+                <img id="power-up-1" class="power-up-img hover-pointer" src="./Assets/Images/goo-worker.png" alt="temporary image of goo">   
             </div>   
-        </div>
-        <div id="power-ups-container" class="goo-container">
-            <h1>Power Ups</h1>
-            <div>
-                <h3 class="text-style">x1</h3>
-                <img id="power-up-1" class="power-up-img hover-pointer" src="./Assets/Images/power-up-1-img.png" alt="temporary image of goo">
+           <div class="power-up-item">
+                <p class="power-up-label text-centered">Goo Factory</p>
+                <img id="power-up-2" class="power-up-img hover-pointer" src="./Assets/Images/goo-factory.png" alt="temporary image of goo">   
             </div> 
-            <div>
-                <h3 class="text-style">x5</h3>
-                <img id="power-up-2" class="power-up-img hover-pointer" src="./Assets/Images/power-up-2-img.png" alt="temporary image of goo">
-            </div> 
-            <div>
-                <h3 class="text-style">x10</h3>
-                <img id="power-up-3" class="power-up-img hover-pointer" src="./Assets/Images/power-up-3-img.png" alt="temporary image of goo">
-            </div>   
+             <div class="power-up-item">
+                <p class="power-up-label text-centered">Goo B2 Bomber</p>
+                <img id="power-up-3" class="power-up-img hover-pointer" src="./Assets/Images/goo-b2-bomber.png" alt="temporary image of goo">   
         </div>
+        
+        
 </body>
 <script src="main.js"></script>
 </html>
