@@ -19,7 +19,6 @@ class PowerUp
                 gooCounterTxt.textContent = currentGooCount;
                 gooPerSecond += this.effect;
                 gooPerSecondTxt.textContent = gooPerSecond;
-                powerUp1AmountTxt.textContent = this.amountPurchased;
                 console.log(currentGooCount);
         }
         else 
@@ -40,8 +39,8 @@ const powerUpTwoImg = document.getElementById("power-up-2");
 const powerUpThreeImg = document.getElementById("power-up-3");
 
 //global variables
-let currentGooCount =0;
-let gooPerSecond = 100; 
+let currentGooCount = 0;
+let gooPerSecond = 1; 
 const time = 1000;
 
 const powerUpOne = new PowerUp("x1", 10, 1, 0);
